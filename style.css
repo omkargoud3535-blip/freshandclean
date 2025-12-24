@@ -1,0 +1,319 @@
+/* Global */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  line-height: 1.6;
+  background: #72aeeb;
+}
+
+/* Navbar */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #1a1a1a;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+nav .logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+nav .logo span {
+  color: #846ed2;
+}
+
+.nav-links {
+  list-style: none;
+  margin-right: 30px;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 14px;
+  transition: 0.3s;
+  border-radius: 4px;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  background: #44d2e5;
+  color: white;
+}
+
+/* Hero */
+.hero {
+  background: url('https://images.unsplash.com/photo-1581579186985-2c2b2bb2b8de') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+}
+
+.hero h1 span {
+  color: #331b69;
+}
+
+.hero p {
+  font-size: 20px;
+  margin: 15px 0;
+}
+
+.btn {
+  background: #0cec53;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #2f2a49;
+}
+
+/* Section */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* About */
+.about {
+  background: #e0f7fa;
+  padding-top: 100px;
+}
+
+.about p {
+  max-width: 1200px;
+  margin: auto;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Services */
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.service-cards .card {
+  background: white;
+  padding: 20px;
+  width: 250px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.service-cards img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+/* Pricing */
+.pricing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.price-card {
+  background: white;
+  padding: 20px;
+  width: 250px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.price-card.popular {
+  border: 2px solid #00bcd4;
+}
+
+.price {
+  font-size: 28px;
+  color: #00bcd4;
+  margin: 10px 0;
+}
+
+.price-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Contact */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.contact input,
+.contact textarea {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.contact button {
+  width: 100%;
+}
+.email-confirm {
+  text-align: center;
+  padding: 40px;
+  background: #f7f7f7;
+}
+
+.email-confirm input {
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #555;
+}
+
+.email-confirm button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.email-confirm p {
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+
+/* Booking Section */
+#booking {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+#booking .left,
+#booking .right {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#booking .service {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+#cart {
+  list-style: none;
+  padding: 0;
+}
+
+/* Footer */
+footer {
+  background: #1a1a1a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #00bcd4;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.booking-section {
+  padding: 50px;
+  background: #f8f8f8;
+}
+
+.booking-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.services-list, .booking-form {
+  width: 48%;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ddd;
+}
+
+.service {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.service button {
+  background: #0a74da;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.booking-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.bill {
+  margin-top: 40px;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #ccc;
+}
+
+.bill .success {
+  color: green;
+  font-size: 20px;
+  margin-top: 10px;
+}
