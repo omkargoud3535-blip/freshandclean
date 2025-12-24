@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laundry Mart</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+     <div class="logo">Fresh<span>Wash</span></div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#email-confirmation" class="active">Email</a></li>
+
+        <li><a href="#booking">Booking</a></li>
+        <li><a href="#footer">Footer</a></li>
+        </ul>
+  </nav>
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Your Clothes, <span>Fresh & Clean</span></h1>
+      <p> Fresh Wash Laundry Mart is your trusted partner for fast, affordable, and premium laundry care. We combine modern cleaning technology with expert handling to give your clothes the care they deserve. From washing and ironing to dry cleaning and express delivery, we ensure spotless results with every service.
+With convenient doorstep pickup and delivery, flexible pricing, and hygienic cleaning practices, Laundry Mart is designed to make your daily life easier. Our goal is simple — to save your time, protect your clothes, and deliver freshness straight to your home.</p>
+      <button id="bookBtn" class="btn">Book Now</button>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>
+        FreshWash Laundry Mart offers fast and premium laundry service at your convenience.
+        Doorstep pickup and delivery, quality wash, and quick turnaround.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/679/679922.png" alt="Washing">
+        <h3>Washing</h3>
+        <p>Eco-friendly detergents for a gentle yet effective clean.</p>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2921/2921822.png" alt="Ironing">
+        <h3>Ironing</h3>
+        <p>Perfectly pressed clothes — wrinkle free & fresh.</p>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1010/1010390.png" alt="Dry Cleaning">
+        <h3>Dry Cleaning</h3>
+        <p>Safe and gentle cleaning for delicate fabrics.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="pricing">
+    <h2>Pricing Plans</h2>
+    <div class="pricing-cards">
+      <div class="price-card">
+        <h3>Basic</h3>
+        <p class="price">₹99</p>
+        <ul>
+          <li>Washing</li>
+          <li>Folding</li>
+          <li>2 Day Delivery</li>
+        </ul>
+        <button class="btn">Select</button>
+      </div>
+      <div class="price-card popular">
+        <h3>Premium</h3>
+        <p class="price">₹199</p>
+        <ul>
+          <li>Washing + Ironing</li>
+          <li>1 Day Delivery</li>
+          <li>Door Pickup</li>
+        </ul>
+        <button class="btn">Select</button>
+      </div>
+      <div class="price-card">
+        <h3>Express</h3>
+        <p class="price">₹299</p>
+        <ul>
+          <li>Dry Cleaning</li>
+          <li>Same Day</li>
+          <li>Priority Service</li>
+        </ul>
+        <button class="btn">Select</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+    <p id="formMessage"></p>
+  </section>
+  
+
+  <!-- Email Confirmation -->
+    <section id="email-confirmation" class="email-confirm">
+  <h2>Email Confirmation</h2>
+
+  <input type="email" id="confirmEmail" placeholder="Enter your email" required>
+
+  <button onclick="confirmEmailFunction()">Confirm Email</button>
+
+  <p id="emailMessage"></p>
+</section>
+
+
+  <!-- Quality Description -->
+  <section id="quality">
+    <h2>Quality Description Section</h2>
+    <ul>
+      <li>Premium services, quick support, timely delivery.</li>
+      <li>Affordable prices with guaranteed quality.</li>
+      <li>Clear communication of unique selling points.</li>
+    </ul>
+  </section>
+
+  <!-- Newsletter Subscription -->
+  <section id="newsletter">
+    <h2>Subscribe to Our Newsletter</h2>
+    <input type="text" placeholder="Full Name" />
+    <input type="email" placeholder="Email" />
+    <button>Subscribe</button>
+  </section>
+
+  <!-- Booking Services -->
+  <section id="booking">
+    <div class="left">
+      <h2>Our Services</h2>
+      <div class="service">
+        <span>Dry Cleaning - ₹200</span>
+        <button onclick="addService('Dry Cleaning', 200)">Add</button>
+      </div>
+      <div class="service">
+        <span>Wash & Fold - ₹100</span>
+        <button onclick="addService('Wash & Fold', 100)">Add</button>
+      </div>
+      <div class="service">
+        <span>Ironing - ₹50</span>
+        <button onclick="addService('Ironing', 50)">Add</button>
+      </div>
+    </div>
+
+    <div class="right">
+      <h2>Added Items</h2>
+      <ul id="cart"></ul>
+      <p>Total Amount: ₹<span id="total">0</span></p>
+      <input type="text" placeholder="Full Name"><br><br>
+      <input type="email" placeholder="Email"><br><br>
+      <input type="text" placeholder="Phone Number"><br><br>
+      <button>Book Now</button>
+    </div>
+    <input type="email" id="custEmail" placeholder="Email">
+<p id="emailError" class="error-text"></p>
+
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <p>© 2025 Laundry Mart</p>
+    <p>
+      <a href="#">About Us</a> |
+      <a href="#">Contact</a> |
+      <a href="#">Privacy Policy</a>
+    </p>
+    <p>Follow us: 🌐 📘 🐦 📸</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
